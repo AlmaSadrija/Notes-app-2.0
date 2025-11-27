@@ -5,12 +5,15 @@ body {
   justify-content: center;
   padding: 20px;
   background-color: #f0f0f0;
-
 }
 
 .container {
   width: 500px;
-  background-color: #4caf50;
+
+  display: flex;
+  flex-direction: column;
+  /* stack notes vertically */
+  align-items: center;
 }
 
 .container:hover {
@@ -24,7 +27,7 @@ body {
   flex-direction: column;
   gap: 10px;
   background-color: red;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 /* Each note styling */
@@ -37,7 +40,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff8a6;
+  background-color: #f0f0f0;
   /* sticky-note yellow */
   padding: 10px;
   border-radius: 8px;
@@ -48,7 +51,6 @@ body {
 
 .note:hover {
   transform: scale(1.2);
-  background-color: aqua;
 }
 
 .deleteBtn {
@@ -92,4 +94,10 @@ body {
 .deleteBtn {
   background-color: #ff6b6b;
   color: white;
+}
+
+#create-note-btn {
+  background-color: pink;
+  border: red;
+  border-radius: 10px;
 }
