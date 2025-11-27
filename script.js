@@ -45,6 +45,7 @@ createNoteBtn.addEventListener("click", function () {
   newNote.appendChild(saveNoteBtn);
 
   // Save button
+  /*
   saveNoteBtn.addEventListener("click", function () {
     if (confirm("Are you sure you want to save this note?")) {
       const textSpan = newNote.querySelector(".note-text"); // select the span
@@ -55,4 +56,5 @@ createNoteBtn.addEventListener("click", function () {
       }
     }
   });
+  */
 });
