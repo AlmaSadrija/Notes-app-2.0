@@ -1,0 +1,49 @@
+/* General container styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 500px;
+}
+
+/* Notes section layout */
+#notes-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* space between notes */
+}
+
+/* Each note styling */
+.note {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  cursor: pointer;
+  border: none;
+}
+
+.saveNote {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  border: none;
+  background-color: #fff;
+}
