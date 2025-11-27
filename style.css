@@ -49,9 +49,7 @@ body {
   width: 200px;
 }
 
-.note:hover {
-  transform: scale(1.2);
-}
+
 
 .deleteBtn {
 
@@ -70,7 +68,6 @@ body {
   border: none;
   background-color: #4caf50;
   color: white;
-
 }
 
 .note-text {
