@@ -1,18 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General container styling */
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228))
 }
 
 .container {
   width: 500px;
-
+  height: 400px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  /* stack notes vertically */
+  background-color: #fff;
   align-items: center;
 }
 
@@ -98,3 +106,5 @@ body {
   border: red;
   border-radius: 10px;
 }
+
+.simple-text {}
