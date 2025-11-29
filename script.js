@@ -10,7 +10,7 @@ createNoteBtn.addEventListener("click", function () {
 
   // 2b️⃣ Create a span for the note text
   const noteText = document.createElement("span");
-  noteText.textContent = "New Note";
+  noteText.textContent = "Click to edit...";
   noteText.classList.add("note-text");
   noteText.contentEditable = true; // ✅ allows typing directly
   newNote.appendChild(noteText);
