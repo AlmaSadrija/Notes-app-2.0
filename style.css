@@ -24,10 +24,6 @@ body {
   align-items: center;
 }
 
-.container:hover {
-  background-color: aliceblue;
-}
-
 /* Notes section layout */
 #notes-section {
   margin-top: 20px;
@@ -110,6 +106,21 @@ body {
   color: #f0f0f0;
   height: 3rem;
   width: 200px;
+  border-color: #f0f0f0;
 }
 
-.simple-text {}
+#delete-notes-btn {
+  height: 3rem;
+  background-color: red;
+  border-color: #f0f0f0;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #f0f0f0;
+  width: 130px;
+}
+
+.simple-text {
+  padding: 10px;
+}
