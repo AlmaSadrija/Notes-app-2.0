@@ -1,7 +1,7 @@
 // 1️⃣ Select elements
 const createNoteBtn = document.getElementById("create-note-btn");
 const notesSection = document.getElementById("notes-section");
-const deleteAllNotesBtn = document.querySelector("#delete-notes-btn"); // FIXED
+const deleteAllNotesBtn = document.querySelector("#delete-notes-btn");
 
 // 2️⃣ Listen for button click to create a new note
 createNoteBtn.addEventListener("click", function () {
@@ -43,8 +43,10 @@ createNoteBtn.addEventListener("click", function () {
     if (newText !== null) noteText.textContent = newText;
   });
 
-  // 9️⃣ Delete single note
-  deleteNoteBtn.addEventListener("click", function () {
-    if (confirm("Delete this note?")) newNote.remove();
+  // 9️⃣ Delete all notes
+  deleteAllNotesBtn.addEventListener("click", function () {
+    if (confirm("Delete those notes?")) {
+      newNote.innerHTML = "";
+    }
   });
 });
