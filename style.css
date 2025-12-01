@@ -8,8 +8,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
+  min-height: 100vh;
   padding: 20px;
   background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228))
 }
@@ -52,6 +51,13 @@ body {
   outline: none;
   /* remove outline when editing */
   word-wrap: break-word;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 .deleteBtn,
