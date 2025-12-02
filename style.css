@@ -60,6 +60,7 @@ body {
   background-color: transparent;
 }
 
+
 .deleteBtn,
 .saveNote {
   cursor: pointer;
@@ -68,24 +69,22 @@ body {
   border: none;
 }
 
-
 #create-note-btn {
-  border: red;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: #4f46e5;
   font-size: 1rem;
   font-weight: 550;
   color: #f0f0f0;
   height: 3rem;
   width: 200px;
-  border-color: #f0f0f0;
+  border: none;
 }
 
 #delete-notes-btn {
   height: 3rem;
   background-color: red;
   border-color: #f0f0f0;
-  border-radius: 5px;
+  border-radius: 50px;
   border-style: none;
   font-size: 1rem;
   font-weight: 550;
