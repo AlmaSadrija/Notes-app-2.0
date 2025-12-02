@@ -14,52 +14,52 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
   align-items: center;
-}
+  /* make grid stretch full width */
+  background-color: #fff;
+  padding: 20px;
 
+}
 
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
-  gap: 20px;
-  min-height: 100px;
-  border-radius: 8px;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  /* make sure grid fills container */
 }
 
-/* Each note styling */
 .note {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
   background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
-  position: relative;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 20px 10px;
+  min-height: 100px;
+  transition: transform 0.15s ease;
+}
+
+.note:hover {
+  transform: translateY(-4px);
 }
 
 .note-text {
-  display: block;
   min-height: 40px;
   padding: 5px;
   outline: none;
-  /* remove outline when editing */
   word-wrap: break-word;
 }
 
 .btn-wrapper {
-  position: absolute;
-  top: 5px;
-  right: 5px;
   display: flex;
-  gap: 5px;
-  background-color: transparent;
-}
+  justify-content: flex-end;
+  gap: 10px;
 
+}
 
 .deleteBtn,
 .saveNote {
@@ -69,7 +69,7 @@ body {
   border: none;
 }
 
-#create-note-btn {
+.btn-primary {
   border-radius: 50px;
   background-color: #4f46e5;
   font-size: 1rem;
@@ -80,7 +80,7 @@ body {
   border: none;
 }
 
-#delete-notes-btn {
+.btn-secondary {
   height: 3rem;
   background-color: red;
   border-color: #f0f0f0;
@@ -90,6 +90,41 @@ body {
   font-weight: 550;
   color: #f0f0f0;
   width: 130px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
 }
 
 .simple-text {
