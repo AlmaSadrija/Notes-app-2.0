@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   min-height: 100vh;
   padding: 20px;
-  background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228))
+  background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228));
 }
 
 .container {
@@ -34,7 +34,6 @@ body {
 
 /* Each note styling */
 .note {
-
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
@@ -58,6 +57,7 @@ body {
   right: 5px;
   display: flex;
   gap: 5px;
+  background-color: transparent;
 }
 
 .deleteBtn,

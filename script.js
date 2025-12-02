@@ -42,11 +42,10 @@ createNoteBtn.addEventListener("click", function () {
     const newText = prompt("Edit your note:", noteText.textContent);
     if (newText !== null) noteText.textContent = newText;
   });
-
-  // 9️⃣ Delete all notes
-  deleteAllNotesBtn.addEventListener("click", function () {
-    if (confirm("Delete those notes?")) {
-      newNote.innerHTML = "";
-    }
-  });
+});
+// 9️⃣ Delete all notes
+deleteAllNotesBtn.addEventListener("click", function () {
+  if (confirm("Delete those notes?")) {
+    notesSection.innerHTML = "";
+  }
 });
