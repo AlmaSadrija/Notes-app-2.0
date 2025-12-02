@@ -42,10 +42,23 @@ createNoteBtn.addEventListener("click", function () {
     const newText = prompt("Edit your note:", noteText.textContent);
     if (newText !== null) noteText.textContent = newText;
   });
+
+  // 9️⃣ DELETE INDIVIDUAL NOTE
+  deleteNoteBtn.addEventListener("click", function () {
+    if (confirm("Delete this note?")) {
+      newNote.remove();
+    }
+  });
+
+  // 🔟 SAVE NOTE (optional)
+  saveNoteBtn.addEventListener("click", function () {
+    alert("Note saved! (functionality not added yet)");
+  });
 });
-// 9️⃣ Delete all notes
+
+// Delete ALL notes
 deleteAllNotesBtn.addEventListener("click", function () {
-  if (confirm("Delete those notes?")) {
+  if (confirm("Delete all notes?")) {
     notesSection.innerHTML = "";
   }
 });
