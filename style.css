@@ -7,7 +7,7 @@
 /* General container styling */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   padding: 20px;
   background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228));
