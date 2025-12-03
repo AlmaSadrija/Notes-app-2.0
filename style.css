@@ -41,6 +41,9 @@ body {
   padding: 20px 10px;
   min-height: 100px;
   transition: transform 0.15s ease;
+  /*idk*/
+  display: flex;
+  flex-direction: column;
 }
 
 .note:hover {
