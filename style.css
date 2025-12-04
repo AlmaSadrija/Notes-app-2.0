@@ -63,6 +63,7 @@ body {
 
 .note:hover {
   transform: translateY(-4px);
+  background-color: #dc2626;
 }
 
 .note-text {
