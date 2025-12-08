@@ -25,6 +25,12 @@ createNoteBtn.addEventListener("click", function () {
   // 4️⃣ Append buttons to the wrapper ONLY
   btnWrapper.append(deleteNoteBtn, saveNoteBtn);
 
+  // 5️⃣ Create the editable text
+  const noteText = document.createElement("span");
+  noteText.textContent = "Click to edit...";
+  noteText.classList.add("note-text");
+  noteText.contentEditable = true;
+
   // 6️⃣ Append wrapper AND text to the note
   newNote.append(btnWrapper, noteText);
 
@@ -48,12 +54,6 @@ createNoteBtn.addEventListener("click", function () {
   saveNoteBtn.addEventListener("click", function () {
     alert("Note saved! (functionality not added yet)");
   });
-
-  // 5️⃣ Create the editable text
-  const noteText = document.createElement("span");
-  noteText.textContent = "Click to edit...";
-  noteText.classList.add("note-text");
-  noteText.contentEditable = true;
 });
 
 // Delete ALL notes
