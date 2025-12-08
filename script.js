@@ -32,7 +32,7 @@ createNoteBtn.addEventListener("click", function () {
   noteText.contentEditable = true;
 
   // 6️⃣ Append wrapper AND text to the note
-  newNote.append(btnWrapper, noteText);
+  newNote.append(noteText, btnWrapper);
 
   // 7️⃣ Append note to section
   notesSection.appendChild(newNote);
