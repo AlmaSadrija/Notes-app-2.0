@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General container styling */
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228));
+}
+
+.container {
+  max-width: 960px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* make grid stretch full width */
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.note {
+  background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 20px 10px;
+  min-height: 100px;
+  transition: transform 0.15s ease;
+  /*idk*/
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 10px rgba(213, 197, 123, 0.5);
+}
+
+.note:hover {
+  transform: translateY(-4px);
+}
+
+.note-text {
+  min-height: 40px;
+  padding: 5px;
+  outline: none;
+  word-wrap: break-word;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.deleteBtn,
+.saveNote {
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-primary {
+  border-radius: 50px;
+  background-color: #4f46e5;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #f0f0f0;
+  height: 3rem;
+  width: 200px;
+  border: none;
+}
+
+.btn-secondary {
+  height: 3rem;
+  background-color: red;
+  border-color: #f0f0f0;
+  border-radius: 50px;
+  border-style: none;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #f0f0f0;
+  width: 130px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-4px);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+.simple-text {
+  padding: 10px;
+}
