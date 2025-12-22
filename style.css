@@ -30,7 +30,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 641px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .note {
@@ -95,12 +100,21 @@ body {
   width: 130px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active {
   transform: translateY(-4px);
+  cursor: pointer;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:active {
   transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(-2px);
 }
 
 .controls {
@@ -112,24 +126,100 @@ body {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding: 10px;
+  }
+
   .container {
-    padding: 24px;
+    padding: 16px;
+    width: 100%;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .simple-text {
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   .controls {
     flex-direction: column;
+    width: 100%;
+    gap: 12px;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
+    height: 2.75rem;
+    font-size: 0.95rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .note {
+    min-height: 120px;
+    padding: 16px 12px;
+  }
+
+  .note-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 24px;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .notes-grid {
+    gap: 15px;
+  }
+
+  .note {
+    padding: 24px 16px;
   }
 }
 
 .simple-text {
   padding: 10px;
+}
+
+#empty-message {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+}
+
+#empty-message.hidden {
+  display: none;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-secondary,
+  .deleteBtn,
+  .saveNote {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
 }
