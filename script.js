@@ -1,4 +1,4 @@
-const deleteNoteBtn = document.getElementById("delete-note-btn");
+const deleteNoteBtn = document.getElementById("delete-notes-btn");
 const notesSection = document.getElementById("notes-section");
 const createNoteBtn = document.getElementById("create-note-btn");
 const container = document.getElementById("container");
