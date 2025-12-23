@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General container styling */
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(76, 76, 196), rgb(228, 108, 228));
+}
+
+.container {
+  max-width: 960px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* make grid stretch full width */
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 641px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.note {
+  background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 20px 10px;
+  min-height: 100px;
+  transition: transform 0.15s ease;
+  /*idk*/
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 10px rgba(213, 197, 123, 0.5);
+}
+
+.note:hover {
+  transform: translateY(-4px);
+}
+
+.note-text {
+  min-height: 40px;
+  padding: 5px;
+  outline: none;
+  word-wrap: break-word;
+  background: transparent;
+  border: none;
+  width: 100%;
+  resize: none;
+  font-family: inherit;
+  font-size: inherit;
+  flex-grow: 1;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.deleteBtn,
+.saveNote {
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.saveNote:hover {
+  background-color: rgba(0, 128, 0, 0.2);
+}
+
+.btn-primary {
+  border-radius: 50px;
+  background-color: #4f46e5;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #f0f0f0;
+  height: 3rem;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  height: 3rem;
+  background-color: red;
+  border-color: #f0f0f0;
+  border-radius: 50px;
+  border-style: none;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #f0f0f0;
+  width: 130px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(-2px);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 16px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .simple-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    height: 2.75rem;
+    font-size: 0.95rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .note {
+    min-height: 120px;
+    padding: 16px 12px;
+  }
+
+  .note-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 24px;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .notes-grid {
+    gap: 15px;
+  }
+
+  .note {
+    padding: 24px 16px;
+  }
+}
+
+.simple-text {
+  padding: 10px;
+}
+
+#empty-message {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+}
+
+#empty-message.hidden {
+  display: none;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-secondary,
+  .deleteBtn,
+  .saveNote {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
