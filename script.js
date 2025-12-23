@@ -28,7 +28,11 @@ createNoteBtn.addEventListener("click", function () {
   });
   deleteBtn.addEventListener("click", function () {
     alert("Note deleted!");
+    newNote.innerHTML = "";
   });
   newNote.appendChild(saveBtn);
   newNote.appendChild(deleteBtn);
+});
+deleteNoteBtn.addEventListener("click", function () {
+  notesSection.innerHTML = "";
 });
