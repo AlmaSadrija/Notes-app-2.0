@@ -15,6 +15,10 @@ createNoteBtn.addEventListener("click", function () {
   newNote.textContent = "Hello there. Write your note here";
   notesSection.appendChild(newNote);
 
+  const btnWrapper = document.createElement("div");
+  btnWrapper.classList.add("btn-wrapper");
+  newNote.appendChild(btnWrapper);
+
   const saveBtn = document.createElement("button");
   saveBtn.classList.add("saveNote");
   saveBtn.textContent = "✅";
@@ -28,11 +32,11 @@ createNoteBtn.addEventListener("click", function () {
   });
   deleteBtn.addEventListener("click", function () {
     alert("Note deleted!");
-    newNote.innerHTML = "";
+    newNote.remove();
   });
-  newNote.appendChild(saveBtn);
-  newNote.appendChild(deleteBtn);
+  btnWrapper.appendChild(saveBtn);
+  btnWrapper.appendChild(deleteBtn);
 });
 deleteNoteBtn.addEventListener("click", function () {
-  notesSection.innerHTML = "";
+  notesSection.remove();
 });
