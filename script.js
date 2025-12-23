@@ -18,8 +18,17 @@ createNoteBtn.addEventListener("click", function () {
   const saveBtn = document.createElement("button");
   saveBtn.classList.add("saveNote");
   saveBtn.textContent = "✅";
-  newNote.appendChild(saveBtn);
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("deleteBtn");
+  deleteBtn.textContent = "🗑️";
+
   saveBtn.addEventListener("click", function () {
-    console.log("Note saved!");
+    alert("Note saved!");
   });
+  deleteBtn.addEventListener("click", function () {
+    alert("Note deleted!");
+  });
+  newNote.appendChild(saveBtn);
+  newNote.appendChild(deleteBtn);
 });
