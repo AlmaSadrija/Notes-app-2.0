@@ -5,7 +5,7 @@ const container = document.getElementById("container");
 
 createNoteBtn.addEventListener("click", function () {
   const newNote = document.createElement("div");
-  newNote.classList.add("new-note");
+  newNote.classList.add("note");
   newNote.textContent = "Hello there. Write your note here";
   notesSection.appendChild(newNote);
 
