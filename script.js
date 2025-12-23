@@ -18,4 +18,5 @@ createNoteBtn.addEventListener("click", function () {
   const saveBtn = document.createElement("button");
   saveBtn.classList.add("save-btn");
   saveBtn.textContent = "✅";
+  newNote.appendChild(saveBtn);
 });
