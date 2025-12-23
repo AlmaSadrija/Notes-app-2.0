@@ -16,7 +16,10 @@ createNoteBtn.addEventListener("click", function () {
   notesSection.appendChild(newNote);
 
   const saveBtn = document.createElement("button");
-  saveBtn.classList.add("save-btn");
+  saveBtn.classList.add("saveNote");
   saveBtn.textContent = "✅";
   newNote.appendChild(saveBtn);
+  saveBtn.addEventListener("click", function () {
+    console.log("Note saved!");
+  });
 });
