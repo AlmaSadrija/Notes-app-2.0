@@ -32,5 +32,5 @@ createNoteBtn.addEventListener("click", function () {
   btnWrapper.appendChild(deleteBtn);
 });
 deleteNoteBtn.addEventListener("click", function () {
-  notesSection.remove();
+  notesSection.innerHTML = "";
 });
